@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-Neon-Green: hsl(150, 100%, 66%);
+  --neutral-grayish-Blue: hsl(217, 19%, 38%);
+  --neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+body {
+  background-color: var(--neutral-dark-blue);
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  background-color: var(--neutral-dark-grayish-blue);
+  padding: 2.5rem;
+  position: relative;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.advice-id,
+.advice-text,
+#divider,
+#dice {
+  margin-bottom: 1rem;
+}
+
+.advice-id {
+  color: var(--primary-Neon-Green);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.5ch;
+}
+
+.advice-text {
+  color: var(--primary-light-cyan);
+  font-size: 28px;
+}
+
+.divider-container {
+  width: 100%;
+}
+.divider-container > img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.refresh-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-Neon-Green);
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, 0%);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/*
+  how to center a img inside a circular div -
+
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+*/
+.refresh-button > img {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+/*
+  To make glow effects on button:: hover
+  use box-shadow
+*/
+.refresh-button:hover {
+  box-shadow: 0 0px 15px var(--primary-Neon-Green);
+}
+
+@media (max-width: 375px) {
+}
